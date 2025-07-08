@@ -1,7 +1,10 @@
 import React from 'react'
 import Searchform from './Searchform'
 
-function Hero() {
+ function Hero({searchParams }: {searchParams:{query?:string}}) {
+
+    const query=(searchParams).query || ""
+
   return (
     <div>
 
@@ -16,7 +19,7 @@ function Hero() {
                         Virtual competitons
                     </p>
 
-                    <Searchform></Searchform>
+                    <Searchform query={query}></Searchform>
         </section>
       
     </div>

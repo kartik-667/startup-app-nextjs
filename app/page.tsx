@@ -2,11 +2,12 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 
-function page() {
+
+function page({searchParams}:{searchParams:{query?:string}}) {
   return (
     <div>
       <Navbar></Navbar>
-      <Hero></Hero>
+      <Hero searchParams={searchParams}></Hero>
     </div>
   )
 }
