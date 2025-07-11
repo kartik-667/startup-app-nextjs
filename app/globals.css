@@ -58,16 +58,11 @@
   }
 
   .pattern {
-     background-image: linear-gradient(
-            to right,
-            transparent 49.5%,
-            rgba(251, 232, 67, 0.2) 49.5%,
-            rgba(251, 232, 67, 0.6) 50.5%,
-            transparent 50.5%
-    );
-    background-size: 5% 100%;
-    background-position: center;
-    background-repeat: repeat-x;
+    @apply   bg-[linear-gradient(to_right,transparent_49.5%,rgba(251,232,67,0.2)_49.5%,rgba(251,232,67,0.6)_50.5%,transparent_50.5%)]
+    bg-[length:5%_100%]
+    bg-[position:center]
+    bg-repeat-x
+     
   }
 
   .search-form {
@@ -79,6 +74,20 @@
   .search-btn {
     @apply cursor-pointer size-[50px] rounded-full bg-black flex justify-center items-center transition-all hover:scale-105;
   }
+
+  .card_grid{
+    @apply grid md:grid-cols-3 sm:grid-cols-2 gap-5 
+  }
+  .section_container {
+    @apply px-6 py-10 max-w-7xl mx-auto;
+  }
+  .startup-card {
+    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] transition-all duration-500  ;
+  }
+  .startup-card_date {
+    @apply font-medium text-[16px]  px-4 py-2 rounded-full
+  }
+  
 
 }
 
